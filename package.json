@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_fs_backend",
+  "version": "1.0.0",
+  "description": "NodeJS API Backen Service",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "nodemon server"
+  },
+  "keywords": [
+    "NodeJS",
+    "API"
+  ],
+  "author": "TuongHC",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
