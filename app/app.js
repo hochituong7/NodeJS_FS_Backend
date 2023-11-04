@@ -1,13 +1,13 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-
+const userRouter = require("../router/userRouter")
 // use middleware to form our contract for incoming json payload ONLY !!!
 app.use(express.json())
 
 // use middleware for url encoding
 app.use(express.urlencoded({ extended: true }))
-
+app.use(cors())
 // use middleware to handle cors policy
 // app.use((req, res, next) => {
 //   res.header("Access-Control-Allow-Origin", "*")
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }))
 //   }
 //   next()
 // })
-app.use(cors())
+
 
 // health point or actuator
 app.get("/", (req, res, next) => {
@@ -28,7 +28,7 @@ app.get("/", (req, res, next) => {
 })
 
 //routers
-// app.use("/register", registrationRouter)
+ app.use("/users", userRouter)
 
 // bad url or error we can handle
 // with middleware
