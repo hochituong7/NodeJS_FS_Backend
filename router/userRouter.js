@@ -34,7 +34,7 @@ router.post("/", (req, res, next) => {
       },
     })
   })
-
+ 
 
   // http:localhost:3002/users/7
 router.put("/:id", (req, res, next) => {

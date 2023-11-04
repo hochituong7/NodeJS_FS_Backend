@@ -12,3 +12,8 @@ npm start
 npm i
 npm test
 ```
+
+## Run docker mongoDB
+```shell
+ docker-compose -f ./docker/docker-compose-db.yml up -d 
+ ```
