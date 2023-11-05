@@ -1,63 +1,21 @@
 const express = require("express")
+
+const {saveUser} = require("../db/db")
+
 const router = express.Router()
+router.post("/register", (req, res, next) => {
+  // findUser
+  // if the user exist
+  // return response that Email exist try logging in
+  // else
+  // encrypt password
+  // set the password with the encrypt password
+  // save user to DB
+  saveUser(newUser)
 
-router.get("/", (req, res, next) => {
-  res.status(200).json({
-    message: "Successful - GET",
-    metadata: {
-      hostname: req.hostname,
-      method: req.method,
-    },
-  })
 })
 
-// http:localhost:3002/users/7
-router.get("/:id", (req, res, next) => {
-  res.status(200).json({
-    message: "Successful - GET by ID",
-    metadata: {
-      id: req.params.id,
-      hostname: req.hostname,
-      method: req.method,
-    },
-  })
+router.post("/login", (req, res, next) => {
+
 })
-
-router.post("/", (req, res, next) => {
-    const name = req.body.name
-    res.status(201).json({
-      message: "Successful - POST",
-      metadata: {
-        name: name,
-        hostname: req.hostname,
-        method: req.method,
-      },
-    })
-  })
- 
-
-  // http:localhost:3002/users/7
-router.put("/:id", (req, res, next) => {
-    res.status(200).json({
-      message: "Successful - PUT by ID",
-      metadata: {
-        id: req.params.id,
-        hostname: req.hostname,
-        method: req.method,
-      },
-    })
-  })
-
-  // http:localhost:3002/users/7
-router.delete("/:id", (req, res, next) => {
-    res.status(200).json({
-      message: "Successful - DELETE by ID",
-      metadata: {
-        id: req.params.id,
-        hostname: req.hostname,
-        method: req.method,
-      },
-    })
-  })
-
 module.exports = router
