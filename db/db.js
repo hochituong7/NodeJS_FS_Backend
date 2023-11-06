@@ -5,6 +5,7 @@ const User = require("../models/userModel")
 const connect = async () => {
   try {
     console.log("Connect MongoDB Successful !")
+    mongoose.set("strictQuery", true)
     await mongoose.connect(process.env.mongodb)
   } catch (error) {
     console.error("Error connecting to MongoDB:", error)
