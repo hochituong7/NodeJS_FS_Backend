@@ -4,8 +4,8 @@ const User = require("../models/userModel")
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.mongodb)
     console.log("Connect MongoDB Successful !")
+    await mongoose.connect(process.env.mongodb)
   } catch (error) {
     console.error("Error connecting to MongoDB:", error)
   }
@@ -16,8 +16,8 @@ const disconnect = async () => {
 }
 
 // {firstName: req.body.firstName, email: req.body.email}
-const findUser = async (onj) => {
-  User.findOne(obj)
+const findUser = async (obj) => {
+  return User.findOne(obj).exec()
 }
 const saveUser = async (newUser) => {
   return await newUser.save()

@@ -7,9 +7,9 @@ services:
     container_name: NodeJS_FS_MongoDB
     ports:
       - "27017:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: secret
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: admin
+    #   MONGO_INITDB_ROOT_PASSWORD: secret
     volumes:
       - mongodb-data:/data/db
 
