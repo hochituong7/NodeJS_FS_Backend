@@ -17,3 +17,9 @@ npm test
 ```shell
  docker-compose -f ./docker/docker-compose-db.yml up -d 
  ```
+
+ ## Random secret key 
+ ```shell
+node
+require("crypto").randomBytes(64).toString('hex')
+ ```
