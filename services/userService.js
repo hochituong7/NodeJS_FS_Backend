@@ -58,6 +58,7 @@ exports.loginUser = async (req, res) => {
         loggedUser.password
       )
       if (result) {
+        loggedUser.password = null
         const token = jwt.sign({ user: loggedUser }, process.env.jwt_secret)
         return res.status(201).json({
           user: loggedUser,
