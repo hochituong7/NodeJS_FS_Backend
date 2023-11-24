@@ -18,6 +18,11 @@ npm test
  docker-compose -f ./docker/docker-compose-db.yml up -d 
  ```
 
+ ## Run docker Jenkins
+ ```shell
+docker run --name NodeJS_Jenkins -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+ ```
+
  ## Random secret key 
  ```shell
 node
