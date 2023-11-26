@@ -38,6 +38,7 @@ exports.getBookByIds = async (req, res) => {
 
 exports.postBook = async (req, res) => {
   try {
+    console.log("save");
     const bookStub = new BookModel()
     const foundBook = Object.assign(bookStub, req.body)
     const book = await findBook(foundBook)

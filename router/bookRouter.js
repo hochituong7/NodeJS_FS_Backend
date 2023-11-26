@@ -8,10 +8,11 @@ const {
   deleteBook,
 } = require("../services/bookService")
 
-router.get("/", getAllBooks)
-router.get("/:bookId", getBookByIds)
-router.post("/", postBook)
-router.put("/:bookId", updateBook)
-router.delete("/:bookId", deleteBook)
+const auth = require("../auth/authorization")
+router.get("/", [auth, getAllBooks])
+router.get("/:bookId", [auth, getBookByIds])
+router.post("/", [auth, postBook])
+router.put("/:bookId", [auth, updateBook])
+router.delete("/:bookId", [auth, deleteBook])
 
 module.exports = router
