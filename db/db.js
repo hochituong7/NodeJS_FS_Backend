@@ -11,12 +11,9 @@ const connect = async () => {
     console.error("Error connecting to MongoDB:", error)
   }
 }
-
 const disconnect = async () => {
   await mongoose.connection.close()
 }
-
-// {firstName: req.body.firstName, email: req.body.email}
 const findUser = async (obj) => {
   return User.findOne(obj).exec()
 }
