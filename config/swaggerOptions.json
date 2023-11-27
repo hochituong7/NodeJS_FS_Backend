@@ -1,0 +1,142 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "NodeJS Backend Documentation API",
+    "version": "1.0.0",
+    "contact": {
+      "name": "TuongHC",
+      "email": "hochituong7@gmail.com",
+      "url": "unknow.copm"
+    }
+  },
+  "servers": [
+    {
+      "description": "Local server",
+      "url": "http://localhost:3002"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "bearerFormat": "JWT",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/users/register": {
+      "post": {
+        "tags": ["Users"],
+        "description": "Register User",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string",
+                    "default": "Tuong"
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "default": "Ho"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "Pham The Hien"
+                  },
+                  "city": {
+                    "type": "string",
+                    "default": "HCM"
+                  },
+                  "state": {
+                    "type": "string",
+                    "default": "Quan8"
+                  },
+                  "zipCode": {
+                    "type": "string",
+                    "default": "11111"
+                  },
+                  "email": {
+                    "type": "string",
+                    "default": "hochituong7@gmail.com"
+                  },
+                  "password": {
+                    "type": "string",
+                    "default": "123123"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": ["Users"],
+        "description": "Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "default": "hochituong7@gmail.com"
+                  },
+                  "password": {
+                    "type": "string",
+                    "default": "123123"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      }
+    }
+  }
+}
