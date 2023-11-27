@@ -20,6 +20,7 @@ const findUser = async (obj) => {
   })
 }
 const saveUser = async (newUser) => {
+  console.log("Mock save user")
   return Promise.resolve({
     firstName: "Tuong",
     lastName: "Ho",

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1699767291038" clover="3.2.0">
-  <project timestamp="1699767291038" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="7" coveredelements="7" complexity="0" loc="6" ncloc="6" packages="2" files="2" classes="2"/>
+<coverage generated="1701079992952" clover="3.2.0">
+  <project timestamp="1701079992952" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="13" coveredelements="13" complexity="0" loc="12" ncloc="12" packages="2" files="4" classes="4"/>
     <package name="NodeJS_FS_Backend">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="sum.js" path="/Users/hotuong/Documents/Works/Personal/NodeJSUdemy/NodeJS_FS_Backend/sum.js">
@@ -12,7 +12,19 @@
       </file>
     </package>
     <package name="NodeJS_FS_Backend.models">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authorModel.js" path="/Users/hotuong/Documents/Works/Personal/NodeJSUdemy/NodeJS_FS_Backend/models/authorModel.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+      <file name="bookModel.js" path="/Users/hotuong/Documents/Works/Personal/NodeJSUdemy/NodeJS_FS_Backend/models/bookModel.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+      </file>
       <file name="userModel.js" path="/Users/hotuong/Documents/Works/Personal/NodeJSUdemy/NodeJS_FS_Backend/models/userModel.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
