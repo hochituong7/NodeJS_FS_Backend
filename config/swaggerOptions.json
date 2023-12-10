@@ -137,6 +137,412 @@
           }
         }
       }
+    },
+    "/books": {
+      "post": {
+        "tags": ["Books"],
+        "description": "Create a book",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "default": "Harry Poster"
+                  },
+                  "author": {
+                    "type": "string",
+                    "default": "TuongHo"
+                  },
+                  "ISBN": {
+                    "type": "string",
+                    "default": "07101996-01"
+                  },
+                  "numberOfPage": {
+                    "type": "string",
+                    "default": "10000"
+                  },
+                  "price": {
+                    "type": "number",
+                    "default": 100.0
+                  },
+                  "yearPublished": {
+                    "type": "string",
+                    "default": "1996"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Books"],
+        "description": "Get books",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/books/{bookId}": {
+      "put": {
+        "tags": ["Books"],
+        "description": "Update a book by Id",
+        "parameters": [
+          {
+            "name": "bookId",
+            "in": "path",
+            "description": "The book id: ",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "default": "Harry Poster"
+                  },
+                  "author": {
+                    "type": "string",
+                    "default": "TuongHo"
+                  },
+                  "ISBN": {
+                    "type": "string",
+                    "default": "07101996-01"
+                  },
+                  "numberOfPage": {
+                    "type": "string",
+                    "default": "10000"
+                  },
+                  "price": {
+                    "type": "number",
+                    "default": 100.0
+                  },
+                  "yearPublished": {
+                    "type": "string",
+                    "default": "1996"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Books"],
+        "description": "Get a book by Id",
+        "parameters": [
+          {
+            "name": "bookId",
+            "in": "path",
+            "description": "The book id: ",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Books"],
+        "description": "Delete a book by Id",
+        "parameters": [
+          {
+            "name": "bookId",
+            "in": "path",
+            "description": "The book id: ",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/authors": {
+      "post": {
+        "tags": ["Authors"],
+        "description": "Create a author",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "default": "TuongHo"
+                  },
+                  "book": {
+                    "type": "string",
+                    "default": "Harry Poster"
+                  },
+                  "publisher": {
+                    "type": "string",
+                    "default": "07101996-01"
+                  },
+                  "website": {
+                    "type": "string",
+                    "default": "10000"
+                  },
+                  "twitter": {
+                    "type": "string",
+                    "default": "tuong@123"
+                  },
+                  "about": {
+                    "type": "string",
+                    "default": "1996"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Authors"],
+        "description": "Get authors",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/authors/{authorId}": {
+      "patch": {
+        "tags": ["Authors"],
+        "description": "Update a author by Id",
+        "parameters": [
+          {
+            "name": "authorId",
+            "in": "path",
+            "description": "The author id: ",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "default": "TuongHo"
+                  },
+                  "book": {
+                    "type": "string",
+                    "default": "TuongHo"
+                  },
+                  "publisher": {
+                    "type": "string",
+                    "default": "07101996-01"
+                  },
+                  "website": {
+                    "type": "string",
+                    "default": "10000"
+                  },
+                  "twitter": {
+                    "type": "string",
+                    "default": "tuong@123"
+                  },
+                  "about": {
+                    "type": "string",
+                    "default": "1996"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Authors"],
+        "description": "Get a author by Id",
+        "parameters": [
+          {
+            "name": "authorId",
+            "in": "path",
+            "description": "The author id: ",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Authors"],
+        "description": "Delete a author by Id",
+        "parameters": [
+          {
+            "name": "authorId",
+            "in": "path",
+            "description": "The author id: ",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Error"
+          },
+          "501": {
+            "description": "Error"
+          }
+        }
+      }
     }
   }
 }
